@@ -1,23 +1,25 @@
-#
-#  Be sure to run `pod spec lint hanwePodsTest.podspec' to ensure this is a
-#  valid spec and to remove all comments including this before submitting the spec.
-#
-#  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
-#  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
-#
+
 
 Pod::Spec.new do |spec|
-
-  # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  These will help people to find your library, and whilst it
-  #  can feel like a chore to fill in it's definitely to your advantage. The
-  #  summary should be tweet-length, and the description more in depth.
-  #
 
   spec.name         = "hanwePodsTest"
   spec.version      = "0.0.1"
   spec.summary      = "test"
+  spec.swift_version   = '5.0'
+  spec.license      = { :type => 'Apache License, Version 2.0', :text => <<-LICENSE
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+    LICENSE
+  }
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -28,7 +30,7 @@ Pod::Spec.new do |spec|
 test!!
                    DESC
 
-  spec.homepage     = "http://EXAMPLE/hanwePodsTest"
+  spec.homepage     = "https://github.com/HanweeeeLee/hanwePodsTest"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -39,7 +41,7 @@ test!!
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT"
+  #spec.license      = "MIT"
   # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -80,7 +82,7 @@ test!!
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/HanweeeeLee/hanwePodsTest.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/HanweeeeLee/hanwePodsTest.git", :tag => "0.0.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,8 +93,9 @@ test!!
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
+  spec.source_files  = 'hanwePodsTest/**/*.{h,m,swift}'
   spec.exclude_files = "Classes/Exclude"
+  spec.platform = :ios, "13.0"
 
   # spec.public_header_files = "Classes/**/*.h"
 
